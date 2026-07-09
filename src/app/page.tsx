@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import Marquee from '@/components/Marquee';
 import { FeatureCard, FeatureType } from '@/components/ui/grid-feature-cards';
-import { CircularTestimonials } from '@/components/ui/circular-testimonials';
+import SkiperCarousel from '@/components/SkiperCarousel';
 import { AnimatedContainer } from '@/components/ui/animated-container';
 import { TopEventsSection } from '@/components/TopEventsSection';
 
@@ -113,7 +113,7 @@ export default function Home() {
 
         <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center">
           <GradientText
-            colors={["#D4AF37", "#FFDF73", "#B8860B", "#FFF5B2", "#D4AF37"]}
+            colors={["#5227FF", "#4079ff", "#B497CF", "#FF9FFC", "#5227FF"]}
             animationSpeed={6}
             showBorder={false}
             className="text-[12vw] sm:text-6xl md:text-[7rem] font-serif font-black tracking-tight leading-[1] drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] mb-4 justify-center"
@@ -186,18 +186,15 @@ export default function Home() {
                 <h2 className="text-4xl font-black md:text-6xl tracking-tighter leading-tight uppercase">Industry Leaders <br/> <span className="text-surface/50">Calibrated</span></h2>
             </div>
             
-            <AnimatedContainer delay={0.5} className="flex justify-center">
-                <CircularTestimonials 
-                    testimonials={PROJECTS} 
+            <AnimatedContainer delay={0.5} className="flex justify-center w-full">
+                <SkiperCarousel 
+                    images={PROJECTS.map(p => ({
+                        src: p.src,
+                        alt: p.name,
+                        title: p.name
+                    }))} 
                     autoplay={true}
-                    colors={{
-                        name: "white",
-                        designation: "#a1a1aa",
-                        testimony: "#e4e4e7",
-                        arrowBackground: "#27272a",
-                        arrowForeground: "white",
-                        arrowHoverBackground: "#facc15" // accent color
-                    }}
+                    loop={true}
                 />
             </AnimatedContainer>
         </div>
