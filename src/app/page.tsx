@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
-import Aurora from '@/components/Aurora';
 import Marquee from '@/components/Marquee';
 import { FeatureCard, FeatureType } from '@/components/ui/grid-feature-cards';
 import { CircularTestimonials } from '@/components/ui/circular-testimonials';
@@ -79,7 +78,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setBgIndex((prev) => (prev + 1) % HERO_BG_IMAGES.length);
-    }, 2000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -116,7 +115,7 @@ export default function Home() {
             delay={100}
             animateBy="words"
             direction="top"
-            className="text-[12vw] sm:text-6xl md:text-[7rem] font-black tracking-tighter text-contrast leading-[0.95] drop-shadow-md mb-6 justify-center"
+            className="text-[12vw] sm:text-6xl md:text-[7rem] font-black tracking-tighter leading-[0.95] drop-shadow-2xl mb-6 justify-center text-transparent bg-clip-text bg-gradient-to-tr from-accent via-[#fff7b0] to-[#b38f00]"
           />
           <BlurText 
             text="Architecting The Extraordinary."
@@ -131,16 +130,7 @@ export default function Home() {
       <Marquee />
 
       {/* Methodology Section */}
-      <section className="py-32 px-6 md:px-10 relative z-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
-          <Aurora 
-            colorStops={["#4ADE80", "#A855F7", "#FBBF24"]} 
-            blend={0.8} 
-            amplitude={1.5} 
-            speed={0.5} 
-          />
-        </div>
-
+      <section className="py-32 px-6 md:px-10 relative z-20 overflow-hidden bg-surface">
         <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="mb-24 text-center">
             <AnimatedContainer>
