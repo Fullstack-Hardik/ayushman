@@ -63,26 +63,27 @@ const SkiperCarousel = ({
         autoplay={
           autoplay
             ? {
-                delay: 1000,
+                delay: 1200,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
               }
             : false
         }
-        speed={1000}
+        speed={600}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
         loop={loop}
-        slidesPerView={1.2}
+        slidesPerView={1.35}
         breakpoints={{
-          640: { slidesPerView: 2.43 }
+          640: { slidesPerView: 2.43, spaceBetween: 40 }
         }}
         coverflowEffect={{
           rotate: 0,
           slideShadows: false,
           stretch: 0,
           depth: 100,
-          modifier: 2.5,
+          modifier: 1.5,
         }}
         pagination={
           showPagination
