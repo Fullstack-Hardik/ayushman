@@ -23,6 +23,8 @@ import {
 } from 'lucide-react';
 
 import BlurText from '@/components/ui/BlurText';
+import GradientText from '@/components/ui/GradientText';
+import Typewriter from '@/components/ui/Typewriter';
 
 // ... other imports remain unchanged ...
 
@@ -110,19 +112,19 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center">
-          <BlurText 
-            text="Ayushman Events"
-            delay={100}
-            animateBy="words"
-            direction="top"
-            className="text-[12vw] sm:text-6xl md:text-[7rem] font-serif font-black tracking-tight leading-[1] drop-shadow-[0_0_30px_rgba(255,255,255,0.8)] mb-4 justify-center text-zinc-900"
-          />
-          <BlurText 
-            text="Architecting The Extraordinary."
-            delay={50}
-            animateBy="words"
-            direction="bottom"
-            className="text-xl md:text-3xl font-medium tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.6)] justify-center max-w-2xl mx-auto text-zinc-800"
+          <GradientText
+            colors={["#D4AF37", "#FFDF73", "#B8860B", "#FFF5B2", "#D4AF37"]}
+            animationSpeed={6}
+            showBorder={false}
+            className="text-[12vw] sm:text-6xl md:text-[7rem] font-serif font-black tracking-tight leading-[1] drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] mb-4 justify-center"
+          >
+            Ayushman Events
+          </GradientText>
+          <Typewriter
+            text="Architecting The Extraordinary"
+            speed={0.06}
+            delay={0.5}
+            className="text-xl md:text-3xl font-medium tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.6)] justify-center max-w-2xl mx-auto text-white"
           />
         </div>
       </section>
