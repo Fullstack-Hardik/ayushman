@@ -24,8 +24,9 @@ import {
 
 import BlurText from '@/components/ui/BlurText';
 import GradientText from '@/components/ui/GradientText';
-import Typewriter from '@/components/ui/Typewriter';
 import CircularText from '@/components/ui/CircularText';
+import { WebGLShader } from '@/components/ui/web-gl-shader';
+import { LiquidButton } from '@/components/ui/liquid-glass-button';
 
 // ... other imports remain unchanged ...
 
@@ -114,30 +115,28 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-surface via-surface/80 to-transparent z-10 pointer-events-none"></div>
         </div>
 
+        <WebGLShader className="opacity-30 mix-blend-screen" />
+
         <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center w-full">
           <GradientText
             colors={["#9333EA", "#C026D3", "#DB2777", "#F472B6", "#9333EA"]}
             animationSpeed={6}
             showBorder={false}
-            className="text-[14vw] sm:text-6xl md:text-[8rem] font-serif font-black tracking-tighter leading-[0.9] drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] mb-6 justify-center"
+            className="text-[14vw] sm:text-6xl md:text-[8rem] font-serif font-black tracking-tighter leading-[0.9] drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] mb-8 justify-center"
           >
             Ayushman Events
           </GradientText>
-          <Typewriter
-            text="Architecting The Extraordinary"
-            speed={0.06}
-            delay={0.5}
-            className="text-2xl md:text-4xl font-semibold tracking-widest drop-shadow-[0_0_15px_rgba(255,255,255,1)] justify-center max-w-2xl mx-auto text-black uppercase"
-          />
-        </div>
-        
-        <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 z-30 opacity-80 hover:opacity-100 transition-opacity">
-          <CircularText
-            text="ARCHITECTING*THE*EXTRAORDINARY*"
-            onHover="speedUp"
-            spinDuration={20}
-            className="scale-50 md:scale-75 origin-bottom-right drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-          />
+          
+          <div className="flex flex-col items-center justify-center gap-8 opacity-90 hover:opacity-100 transition-opacity">
+            <CircularText
+              text="ARCHITECTING*THE*EXTRAORDINARY*"
+              onHover="speedUp"
+              spinDuration={20}
+              className="scale-90 md:scale-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+            />
+            
+            <LiquidButton className="text-white border border-white/20 rounded-full mt-4" size={'xl'}>Let's Go</LiquidButton>
+          </div>
         </div>
       </section>
 
