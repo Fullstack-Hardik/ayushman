@@ -26,7 +26,6 @@ import BlurText from '@/components/ui/BlurText';
 import GradientText from '@/components/ui/GradientText';
 import CircularText from '@/components/ui/CircularText';
 import { WebGLShader } from '@/components/ui/web-gl-shader';
-import { LiquidButton } from '@/components/ui/liquid-glass-button';
 
 // ... other imports remain unchanged ...
 
@@ -135,7 +134,14 @@ export default function Home() {
               className="scale-90 md:scale-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
             />
             
-            <LiquidButton className="text-white border border-white/20 rounded-full mt-4" size={'xl'}>Let's Go</LiquidButton>
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+              <a href="#contact" className="px-10 py-4 rounded-full bg-white text-black font-bold tracking-wider uppercase text-sm hover:scale-105 transition-transform duration-300 shadow-xl">
+                Contact Us
+              </a>
+              <a href="#events" className="px-10 py-4 rounded-full border border-white/30 text-white font-bold tracking-wider uppercase text-sm hover:scale-105 transition-transform duration-300 backdrop-blur-sm bg-white/5">
+                See Events
+              </a>
+            </div>
           </div>
         </div>
       </section>
