@@ -115,16 +115,21 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center w-full">
-          <div className="relative inline-flex items-center justify-center">
-            <WebGLShader className="opacity-60 mix-blend-screen scale-y-150 scale-x-[1.15]" />
+          <div className="relative inline-block items-center justify-center">
+            <WebGLShader className="opacity-60 mix-blend-screen scale-y-[1.8] scale-x-[1.2] -z-10 absolute inset-0" />
             <GradientText
-            colors={["#9333EA", "#C026D3", "#DB2777", "#F472B6", "#9333EA"]}
-            animationSpeed={6}
-            showBorder={false}
-            className="text-[14vw] sm:text-6xl md:text-[8rem] font-serif font-black tracking-tighter leading-[0.9] drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] mb-8 justify-center relative z-10"
-          >
-            Ayushman Events
-          </GradientText>
+              colors={["#9333EA", "#C026D3", "#DB2777", "#F472B6", "#9333EA"]}
+              animationSpeed={6}
+              showBorder={false}
+              className="text-[14vw] sm:text-6xl md:text-[8rem] font-serif font-black tracking-tighter leading-[0.9] drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] mb-8 justify-center relative z-10"
+            >
+              <BlurText
+                text="Ayushman Events"
+                delay={150}
+                animateBy="words"
+                direction="top"
+              />
+            </GradientText>
           </div>
           
           <div className="flex flex-col items-center justify-center gap-8 opacity-90 hover:opacity-100 transition-opacity">
