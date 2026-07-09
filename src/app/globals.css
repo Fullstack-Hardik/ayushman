@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface: #FDF8F3;
+  --color-contrast: #262626;
+  --color-accent: #E4A4BD;
+  
+  --font-spartan: 'League Spartan', sans-serif;
+}
+
+:root {
+  --background: #FDF8F3;
+  --foreground: #262626;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-spartan);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Elite Typography Adjustments */
+h1, h2, h3, h4, h5, h6, .display-heading {
+  font-family: var(--font-spartan);
+  letter-spacing: -0.04em;
+  line-height: 0.8;
+  font-weight: 900;
+}
+
+.elite-label {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+/* Interactive Tier Transition */
+.elite-transition {
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom WebGL/Canvas wrapper */
+.webgl-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 30s linear infinite;
+}
