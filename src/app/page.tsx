@@ -87,9 +87,11 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden w-full bg-surface">
-      
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:2rem_2rem] pointer-events-none"></div>
+
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center px-6 md:px-10 pt-40 pb-32 z-10 min-h-screen overflow-hidden">
+      <section className="relative flex items-center justify-center px-6 md:px-10 pt-32 pb-24 md:pt-40 md:pb-32 z-10 min-h-[65vh] md:min-h-[90vh] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <AnimatePresence>
             <motion.div
@@ -129,12 +131,12 @@ export default function Home() {
           />
         </div>
         
-        <div className="absolute bottom-10 right-10 z-30 hidden md:block opacity-80 hover:opacity-100 transition-opacity">
+        <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 z-30 opacity-80 hover:opacity-100 transition-opacity">
           <CircularText
             text="AYUSHMAN*EVENTS*LUXURY*"
             onHover="speedUp"
             spinDuration={20}
-            className="scale-75 origin-bottom-right"
+            className="scale-50 md:scale-75 origin-bottom-right"
           />
         </div>
       </section>
