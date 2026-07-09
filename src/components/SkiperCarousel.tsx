@@ -46,6 +46,10 @@ const SkiperCarousel = ({
     padding-bottom: 50px !important;
   }
   `;
+  // Swiper's loop engine struggles when there are too few slides. 
+  // Duplicating the array guarantees a flawless, infinite loop.
+  const infiniteImages = [...images, ...images, ...images, ...images];
+
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 20 }}
@@ -60,20 +64,15 @@ const SkiperCarousel = ({
 
       <Swiper
         spaceBetween={spaceBetween}
-        autoplay={
-          autoplay
-            ? {
-                delay: 1200,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }
-            : false
-        }
-        speed={600}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        speed={800}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
-        loop={loop}
+        loop={true}
         slidesPerView={1.35}
         breakpoints={{
           640: { slidesPerView: 2.43, spaceBetween: 40 }
@@ -103,8 +102,8 @@ const SkiperCarousel = ({
         className="Carousal_001"
         modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
       >
-        {images.map((image, index) => (
-          <SwiperSlide key={index} className="!h-[320px] md:!h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+        {infiniteImages.map((image, index) => (
+          <SwiperSlide key={`${index}-${image.src}`} className="!h-[320px] md:!h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10">
             <div className="relative w-full h-full">
               <img
                 className="h-full w-full object-cover"
