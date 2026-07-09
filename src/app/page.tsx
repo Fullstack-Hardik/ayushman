@@ -127,16 +127,16 @@ export default function Home() {
             text="Architecting The Extraordinary"
             speed={0.06}
             delay={0.5}
-            className="text-2xl md:text-4xl font-semibold tracking-widest drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] justify-center max-w-2xl mx-auto text-white uppercase"
+            className="text-2xl md:text-4xl font-semibold tracking-widest drop-shadow-[0_0_15px_rgba(255,255,255,1)] justify-center max-w-2xl mx-auto text-black uppercase"
           />
         </div>
         
         <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 z-30 opacity-80 hover:opacity-100 transition-opacity">
           <CircularText
-            text="AYUSHMAN*EVENTS*LUXURY*"
+            text="ARCHITECTING*THE*EXTRAORDINARY*"
             onHover="speedUp"
             spinDuration={20}
-            className="scale-50 md:scale-75 origin-bottom-right"
+            className="scale-50 md:scale-75 origin-bottom-right drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
           />
         </div>
       </section>
