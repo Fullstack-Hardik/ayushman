@@ -114,9 +114,12 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-surface via-surface/80 to-transparent z-10 pointer-events-none"></div>
         </div>
 
+        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+          <WebGLShader className="opacity-40 mix-blend-screen w-[150%] h-[150%] max-w-none [mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_50%)]" />
+        </div>
+
         <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center w-full">
           <div className="relative inline-block items-center justify-center">
-            <WebGLShader className="opacity-60 mix-blend-screen scale-y-[1.8] scale-x-[1.2] -z-10 absolute inset-0" />
             <GradientText
               colors={["#9333EA", "#C026D3", "#DB2777", "#F472B6", "#9333EA"]}
               animationSpeed={6}
