@@ -63,11 +63,12 @@ const SkiperCarousel = ({
         autoplay={
           autoplay
             ? {
-                delay: 1500,
+                delay: 1000,
                 disableOnInteraction: false,
               }
             : false
         }
+        speed={1000}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
