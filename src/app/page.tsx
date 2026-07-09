@@ -114,8 +114,8 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-surface via-surface/80 to-transparent z-10 pointer-events-none"></div>
         </div>
 
-        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-          <WebGLShader className="opacity-40 mix-blend-screen w-[150%] h-[150%] max-w-none [mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_50%)]" />
+        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <WebGLShader className="opacity-25 md:opacity-40 mix-blend-screen w-[150%] h-[100%] md:w-[150%] md:h-[150%] max-w-none [mask-image:radial-gradient(circle_at_center,black_10%,transparent_50%)]" />
         </div>
 
         <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center w-full">
@@ -126,12 +126,7 @@ export default function Home() {
               showBorder={false}
               className="text-[14vw] sm:text-6xl md:text-[8rem] font-serif font-black tracking-tighter leading-[0.9] drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] mb-8 justify-center relative z-10"
             >
-              <BlurText
-                text="Ayushman Events"
-                delay={150}
-                animateBy="words"
-                direction="top"
-              />
+              Ayushman Events
             </GradientText>
           </div>
           
