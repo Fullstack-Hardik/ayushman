@@ -22,8 +22,6 @@ import {
     PartyPopper
 } from 'lucide-react';
 
-import BlurText from '@/components/ui/BlurText';
-
 // ... other imports remain unchanged ...
 
 const HERO_BG_IMAGES = [
@@ -109,21 +107,24 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-surface via-surface/80 to-transparent z-10 pointer-events-none"></div>
         </div>
 
-        <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10">
-          <BlurText 
-            text="Ayushman Events"
-            delay={100}
-            animateBy="words"
-            direction="top"
-            className="text-[12vw] sm:text-6xl md:text-[7rem] font-black tracking-tighter leading-[0.95] drop-shadow-2xl mb-6 justify-center text-transparent bg-clip-text bg-gradient-to-tr from-accent via-[#fff7b0] to-[#b38f00]"
-          />
-          <BlurText 
-            text="Architecting The Extraordinary."
-            delay={50}
-            animateBy="words"
-            direction="bottom"
-            className="text-lg md:text-3xl font-medium leading-relaxed text-contrast/90 justify-center max-w-2xl mx-auto drop-shadow-sm"
-          />
+        <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="text-[12vw] sm:text-6xl md:text-[7rem] font-serif font-black tracking-tight leading-[1] drop-shadow-2xl mb-4 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF] via-[#FDE047] to-[#A16207]"
+          >
+            Ayushman Events
+          </motion.h1>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
+          >
+            <p className="text-xl md:text-3xl font-medium tracking-wide text-white/90 drop-shadow-md">
+              Architecting The Extraordinary.
+            </p>
+          </motion.div>
         </div>
       </section>
 
