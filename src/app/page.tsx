@@ -169,7 +169,7 @@ export default function Home() {
           <div className="flex flex-col gap-24">
             {METHODOLOGY_STEPS.map((step, idx) => (
               <div key={idx} className={`flex flex-col md:flex-row items-center gap-12 md:gap-20 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                <AnimatedContainer delay={0.2} className="w-full md:w-1/2">
+                <AnimatedContainer delay={0} className="w-full md:w-1/2">
                   <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border border-black/5 group">
                     <img 
                       src={step.image} 
@@ -181,7 +181,7 @@ export default function Home() {
                   </div>
                 </AnimatedContainer>
                 
-                <AnimatedContainer delay={0.4} className="w-full md:w-1/2 space-y-6 text-center md:text-left">
+                <AnimatedContainer delay={0.1} className="w-full md:w-1/2 space-y-6 text-center md:text-left">
                   <span className="text-accent font-black tracking-[0.2em] uppercase text-sm">Step 0{idx + 1}</span>
                   <h3 className="text-3xl md:text-5xl font-black tracking-tight text-contrast">
                     {step.title}
