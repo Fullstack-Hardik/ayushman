@@ -25,6 +25,7 @@ import {
 import BlurText from '@/components/ui/BlurText';
 import GradientText from '@/components/ui/GradientText';
 import Typewriter from '@/components/ui/Typewriter';
+import CircularText from '@/components/ui/CircularText';
 
 // ... other imports remain unchanged ...
 
@@ -111,12 +112,12 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-surface via-surface/80 to-transparent z-10 pointer-events-none"></div>
         </div>
 
-        <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center">
+        <div className="relative z-20 text-center max-w-[1000px] mx-auto mt-10 flex flex-col items-center w-full">
           <GradientText
-            colors={["#5227FF", "#4079ff", "#B497CF", "#FF9FFC", "#5227FF"]}
+            colors={["#9333EA", "#C026D3", "#DB2777", "#F472B6", "#9333EA"]}
             animationSpeed={6}
             showBorder={false}
-            className="text-[12vw] sm:text-6xl md:text-[7rem] font-serif font-black tracking-tight leading-[1] drop-shadow-[0_0_30px_rgba(255,255,255,0.4)] mb-4 justify-center"
+            className="text-[14vw] sm:text-6xl md:text-[8rem] font-serif font-black tracking-tighter leading-[0.9] drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] mb-6 justify-center"
           >
             Ayushman Events
           </GradientText>
@@ -124,7 +125,16 @@ export default function Home() {
             text="Architecting The Extraordinary"
             speed={0.06}
             delay={0.5}
-            className="text-xl md:text-3xl font-medium tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.6)] justify-center max-w-2xl mx-auto text-white"
+            className="text-2xl md:text-4xl font-semibold tracking-widest drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] justify-center max-w-2xl mx-auto text-white uppercase"
+          />
+        </div>
+        
+        <div className="absolute bottom-10 right-10 z-30 hidden md:block opacity-80 hover:opacity-100 transition-opacity">
+          <CircularText
+            text="AYUSHMAN*EVENTS*LUXURY*"
+            onHover="speedUp"
+            spinDuration={20}
+            className="scale-75 origin-bottom-right"
           />
         </div>
       </section>
